@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:weightSum="100"
+    >
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="137.4dp"
+        android:background="@color/navColor">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="128dp"
+            android:layout_height="68dp"
+            app:srcCompat="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="21dp"/>
+
+        <ImageView
+            android:id="@+id/logo_ment"
+            android:layout_width="match_parent"
+            android:layout_height="30.6dp"
+            app:srcCompat="@drawable/logo_ment"
+            android:layout_marginTop="96dp"/>
+
+        <ImageButton
+            android:id="@+id/menu_bar"
+            android:layout_width="26.6dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="45.4dp"
+            android:layout_marginLeft="17.4dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/menu_bar" />
+
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="388dp"
+            android:layout_marginTop="37.4dp"
+            android:background="@android:color/transparent"
+            android:onClick="movetoSearch"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/search_btn" />
+
+        <ImageButton
+            android:id="@+id/writing_btn"
+            android:layout_width="29.4dp"
+            android:layout_height="29.4dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="436dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/writing_btn" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="52dp"
+        android:text="감정"
+        android:fontFamily="@font/aritaburi"
+        android:textColor="#000"
+        android:textSize="21.4sp" />
+
+    <ImageView
+        android:id="@+id/bookshelf"
+        android:layout_width="match_parent"
+        android:layout_height="17.4dp"
+        android:layout_marginTop="136dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/bookshelf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aritaburi"
+        android:text="당신의 이야기로 서재를 채워주세요"
+        android:textColor="#a3a3a3"
+        android:textSize="21.4sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-96dp"
+        android:textStyle="normal" />
+
+</LinearLayout>
