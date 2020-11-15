@@ -18,78 +18,84 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="128dp"
-            android:layout_height="68dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="21dp"
-            app:srcCompat="@drawable/logo" />
-
-        <ImageView
-            android:id="@+id/logo_ment"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="30.6dp"
-            android:layout_marginTop="96dp"
-            app:srcCompat="@drawable/logo_ment" />
+            android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/menu_bar"
-            android:layout_width="26.6dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="17.4dp"
-            android:layout_marginTop="45.4dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/menu_bar" />
+            <ImageButton
+                android:id="@+id/menu_bar"
+                android:layout_width="26.6dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="45.4dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/menu_bar" />
 
-        <ImageButton
-            android:id="@+id/search_btn"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="388dp"
-            android:layout_marginTop="37.4dp"
-            android:background="@android:color/transparent"
-            android:onClick="movetoSearch"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/search_btn" />
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="128dp"
+                android:layout_height="74dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="21dp"
+                app:srcCompat="@drawable/logo" />
 
-        <ImageButton
-            android:id="@+id/writing_btn"
-            android:layout_width="29.4dp"
-            android:layout_height="29.4dp"
-            android:layout_marginLeft="436dp"
-            android:layout_marginTop="40dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/writing_btn" />
+            <ImageButton
+                android:id="@+id/search_btn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="37.4dp"
+                android:layout_marginRight="6dp"
+                android:layout_toLeftOf="@+id/writing_btn"
+                android:background="@android:color/transparent"
+                android:onClick="movetoSearch"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/search_btn" />
 
+            <ImageButton
+                android:id="@+id/writing_btn"
+                android:layout_width="29.4dp"
+                android:layout_height="29.4dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/writing_btn" />
+
+            <ImageView
+                android:id="@+id/logo_ment"
+                android:layout_width="match_parent"
+                android:layout_height="30.6dp"
+                android:layout_marginTop="96dp"
+                app:srcCompat="@drawable/logo_ment" />
+        </RelativeLayout>
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginLeft="44dp"-->
-<!--        android:fontFamily="@font/aritaburi"-->
-<!--        android:text="감정"-->
-<!--        android:textColor="#000"-->
-<!--        android:textSize="21.4sp"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/bottomNavigationView" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="44dp"-->
+    <!--        android:fontFamily="@font/aritaburi"-->
+    <!--        android:text="감정"-->
+    <!--        android:textColor="#000"-->
+    <!--        android:textSize="21.4sp"-->
+    <!--        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/bottomNavigationView" />-->
 
-<!--    <ImageView-->
-<!--        android:id="@+id/bookshelf"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:layout_marginTop="136dp"-->
-<!--        android:layout_marginBottom="8dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/textView"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@drawable/bookshelf" />-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/bookshelf"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:layout_marginTop="136dp"-->
+    <!--        android:layout_marginBottom="8dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/textView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/bookshelf" />-->
 
 
     <!--    <TextView-->
