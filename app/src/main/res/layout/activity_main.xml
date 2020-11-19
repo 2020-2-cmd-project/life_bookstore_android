@@ -82,12 +82,13 @@
         app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView">
 
         <LinearLayout
+            android:id="@+id/categories"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="InvalidId">
 
             <!--첫 번째-->
-
             <TextView
                 android:id="@+id/category1"
                 android:layout_width="wrap_content"
@@ -170,6 +171,16 @@
                         android:layout_height="96dp"
                         app:srcCompat="@drawable/book1" />
 
+                    <ImageButton
+                        android:id="@+id/add_btn"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/add_btn" />
+
+
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -236,9 +247,9 @@
 
 
             <!--추가 문구-->
-
             <TextView
                 android:id="@+id/addCategory"
+                android:onClick="add_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/aritaburi"
@@ -253,8 +264,6 @@
 
         </LinearLayout>
 
-
-
     </ScrollView>
 
 
@@ -262,7 +271,7 @@
 
 
 
-<!--    </RelativeLayout>-->
+    <!--    </RelativeLayout>-->
 
 
 
