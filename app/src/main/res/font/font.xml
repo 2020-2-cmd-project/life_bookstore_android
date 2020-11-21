@@ -3,5 +3,22 @@
     <font
         android:fontStyle = "normal"
         android:fontWeight= "400"
-        android:font= "@font/aritaburi"/>
+        android:font= "@font/aritaburi" />
+
+    <font
+        android:font= "@font/SourceHanSerifK_Bold"/>
+
+    <font
+        android:font= "@font/SourceHanSerifK_ExtraLight" />
+
+    <font
+        android:font= "@font/SourceHanSerifK_Heavy" />
+    <font
+        android:font= "@font/SourceHanSerifK_Light" />
+    <font
+        android:font= "@font/SourceHanSerifK_Medium" />
+    <font
+        android:font= "@font/SourceHanSerifK_Regular" />
+    <font
+        android:font= "@font/SourceHanSerifK_SemiBold" />
 </font-family>

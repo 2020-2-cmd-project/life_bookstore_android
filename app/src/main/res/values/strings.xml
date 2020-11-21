@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Life Bookstore</string>
+    <string name="책작성하기">책 작성하기</string>
 </resources>
