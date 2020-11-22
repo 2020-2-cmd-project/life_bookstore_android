@@ -6,19 +6,19 @@
         android:font= "@font/aritaburi" />
 
     <font
-        android:font= "@font/SourceHanSerifK_Bold"/>
+        android:font= "@font/source_han_serif_k_bold"/>
 
     <font
-        android:font= "@font/SourceHanSerifK_ExtraLight" />
+        android:font= "@font/source_han_serif_k_extra_light" />
 
     <font
-        android:font= "@font/SourceHanSerifK_Heavy" />
+        android:font= "@font/source_han_serif_k_heavy" />
     <font
-        android:font= "@font/SourceHanSerifK_Light" />
+        android:font= "@font/source_han_serif_k_light" />
     <font
-        android:font= "@font/SourceHanSerifK_Medium" />
+        android:font= "@font/source_han_serif_k_medium" />
     <font
-        android:font= "@font/SourceHanSerifK_Regular" />
+        android:font= "@font/source_han_serif_k_regular" />
     <font
-        android:font= "@font/SourceHanSerifK_SemiBold" />
+        android:font= "@font/source_han_serif_k_semi_bold" />
 </font-family>
