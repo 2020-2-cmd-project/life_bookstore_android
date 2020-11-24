@@ -61,6 +61,7 @@
                 android:layout_marginRight="6dp"
                 android:layout_alignParentRight="true"
                 android:background="@android:color/transparent"
+                android:onClick="movetoWrite"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/writing_btn" />
 
@@ -276,17 +277,17 @@
 
 
     <!--        <ImageView-->
-<!--            android:id="@+id/bookshelf"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:layout_marginTop="136dp"-->
-<!--            android:layout_marginBottom="8dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/textView"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:srcCompat="@drawable/bookshelf" />-->
+    <!--            android:id="@+id/bookshelf"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:layout_gravity="center_horizontal"-->
+    <!--            android:layout_marginTop="136dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@+id/textView"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:srcCompat="@drawable/bookshelf" />-->
 
 
     <!--    <TextView-->
