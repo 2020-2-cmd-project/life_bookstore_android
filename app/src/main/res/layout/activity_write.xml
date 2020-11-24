@@ -60,6 +60,8 @@
         android:layout_marginTop="39dp"
         android:background="@drawable/close_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="backtoMain"
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

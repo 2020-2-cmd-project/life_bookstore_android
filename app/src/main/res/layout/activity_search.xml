@@ -33,20 +33,29 @@
             android:id="@+id/back_btn"
             android:layout_width="9.8dp"
             android:layout_height="19.8dp"
-
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-
             android:layout_alignParentTop="true"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="37dp"
-
             android:background="@android:color/transparent"
             android:onClick="backtoMain"
-
             android:scaleType="fitXY"
             app:srcCompat="@drawable/back_btn" />
+
+        <ImageView
+            android:id="@+id/search_book_field_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="161.4dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            app:srcCompat="@drawable/search_book_field_background" />
 
 
     </RelativeLayout>
