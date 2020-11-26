@@ -14,6 +14,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextClock;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,12 +25,41 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView textView1 = (TextView)findViewById(R.id.addCategory);
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show();
+            }
+        });
     }
 
-    public void add_category(View view) {
-        LinearLayout View = (LinearLayout)findViewById(R.id.categories);
-        Button button = new Button(this);
-        View.addView(button);
+    void show() {
+
+        final EditText edittext = new EditText(this);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("새 카테고리 만들기");
+        builder.setMessage("새로운 카테고리를 만들어주세요");
+
+        builder.setView(edittext);
+
+        builder.setPositiveButton("등록하기",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(),edittext.getText().toString() ,Toast.LENGTH_LONG).show();
+                        //Toast = 하단 팝업. 나중엔 데이터에 반영되도록 수정해야 함.
+                    }
+                });
+
+        builder.setNegativeButton("취소",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+
+        builder.show();
     }
 
     public void movetoSearch(View view) {

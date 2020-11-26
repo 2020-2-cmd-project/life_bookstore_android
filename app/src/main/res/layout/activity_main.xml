@@ -250,7 +250,6 @@
             <!--추가 문구-->
             <TextView
                 android:id="@+id/addCategory"
-                android:onClick="add_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/aritaburi"
