@@ -44,18 +44,50 @@
             android:scaleType="fitXY"
             app:srcCompat="@drawable/back_btn" />
 
-        <ImageView
-            android:id="@+id/search_book_field_background"
+        <SearchView
+            android:id="@+id/bookSearch"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            android:layout_marginTop="161.4dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/findBook"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/search_layout"
+            android:gravity="center_horizontal" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/bookSearch"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:gravity="center_horizontal"
-            app:srcCompat="@drawable/search_book_field_background" />
+            android:background="@drawable/border_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+
+
+
+        <!--        <ImageView-->
+<!--            android:id="@+id/search_book_field_background"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:layout_marginTop="161.4dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            app:srcCompat="@drawable/search_book_field_background" />-->
 
 
     </RelativeLayout>

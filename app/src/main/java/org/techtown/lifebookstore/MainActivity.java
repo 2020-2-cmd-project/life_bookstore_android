@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //카테고리 추가 팝업창 함수
     void show() {
 
         final EditText edittext = new EditText(this);
@@ -62,12 +63,14 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
+    //메인뷰 to 검색뷰
     public void movetoSearch(View view) {
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
 
-    public void movetoWrite(View view) {
+    //메인뷰 to 작성뷰
+   public void movetoWrite(View view) {
         Intent intent = new Intent(this, WriteActivity.class);
         startActivity(intent);
     }
