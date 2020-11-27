@@ -62,9 +62,9 @@
             </shape>
         </item> <!-- Background -->
         <item>
-            <shape android:shpae="rectangle">
+            <shape android:shape="rectangle">
                 <corners android:radius="9.3dp"/>
-                <solid android:color="android:color/white"/>
+                <solid android:color="@color/colorPrimary"/>
             </shape>
         </item>
     </layer-list>
