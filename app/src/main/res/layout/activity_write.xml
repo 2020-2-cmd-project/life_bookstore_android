@@ -8,7 +8,7 @@
     tools:context=".WriteActivity">
 
     <TextView
-        android:id="@+id/txt_write"
+        android:id="@+id/txtWrite"
         android:layout_width="140dp"
         android:layout_height="32dp"
         android:layout_marginStart="90dp"
@@ -16,10 +16,10 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
-        android:fontFamily="@font/source_han_serif_k_semi_bold"
+        android:fontFamily="@font/source_han_serif_k_medium"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="5.3sp"
-        android:text="책 작성하기"
+        android:text="@string/write_book"
         android:includeFontPadding="false"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_content"
+        android:id="@+id/txtContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -41,13 +41,13 @@
         android:includeFontPadding="false"
         android:text="서재에 들어갈\n내용을 작성해주세요"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_write" />
+        app:layout_constraintTop_toBottomOf="@+id/txtWrite" />
 
     <Button
-        android:id="@+id/btn_write"
+        android:id="@+id/btnWrite"
         android:layout_width="54dp"
         android:layout_height="32dp"
         android:layout_marginTop="34dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_close"
+        android:id="@+id/btnClose"
         android:layout_width="18dp"
         android:layout_height="18dp"
         android:layout_marginStart="18dp"
@@ -71,12 +71,12 @@
          />
 
     <Button
-        android:id="@+id/btn_category"
+        android:id="@+id/btnCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="289dp"
         android:layout_marginRight="289dp"
         android:layout_marginBottom="495dp"
@@ -87,11 +87,13 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_content" />
+        app:layout_constraintTop_toBottomOf="@+id/txtContent"
+        app:layout_constraintVertical_bias="0.009" />
 
     <Button
-        android:id="@+id/btn_addCover"
+        android:id="@+id/btnAddCover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="190dp"
@@ -105,16 +107,16 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintVertical_bias="0.182" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/imgCover"
         android:layout_width="67dp"
         android:layout_height="85dp"
-        android:layout_marginTop="93dp"
+        android:layout_marginTop="85dp"
         android:layout_marginEnd="34dp"
         android:layout_marginRight="34dp"
         android:contentDescription="book_cover"
@@ -128,7 +130,7 @@
         android:layout_height="31dp"
         android:layout_marginStart="34dp"
         android:layout_marginLeft="34dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="@font/source_han_serif_k_semi_bold"
         android:includeFontPadding="false"
         android:lineSpacingExtra="4sp"
@@ -139,8 +141,134 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_category" />
-=======
+        app:layout_constraintTop_toBottomOf="@+id/btnCategory" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="437dp"
+        android:layout_height="758dp"
+        android:background="@drawable/search_book_field_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <EditText
+        android:id="@+id/editTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:fontFamily="@font/source_han_serif_k_bold"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="4.7sp"
+        android:text="제목은 여기에 들어갑니다"
+        android:textColor="#000000"
+        android:textSize="21sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <EditText
+        android:id="@+id/editDateLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="@font/source_han_serif_k_medium"
+        android:gravity="end"
+        android:lineSpacingExtra="3.3sp"
+        android:text="20.10.28\n혜화동에서"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/editTitle" />
+
+    <EditText
+        android:id="@+id/editContent"
+        android:layout_width="353dp"
+        android:layout_height="505dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="@font/source_han_serif_k_medium"
+        android:inputType="textPersonName"
+        android:lineSpacingExtra="4sp"
+        android:text="이제부터\n\n여기에\n본문을\n\n쓰면\n됩니다."
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDateLocation" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="105dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="28dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:ems="10"
+        android:fontFamily="@font/source_han_serif_k_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:inputType="textPersonName"
+        android:paddingLeft="30px"
+        android:paddingRight="60px"
+        android:text="#해시태그"
+        android:textColor="#000000"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editContent"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="21dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/hash_tag_delete_button"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="27dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="38dp"
+        android:background="@android:drawable/ic_menu_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName3"
+        app:layout_constraintTop_toBottomOf="@+id/editContent" />
+
+    <Button
+        android:id="@+id/btnColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:text="Color"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/editContent" /><![CDATA[
+
+
+
+
+
+    =======
 >>>>>>> e4faedc789c9198e61513c835f6d4ac02234ccb7
 =======
 >>>>>>> e4faedc789c9198e61513c835f6d4ac02234ccb7
@@ -149,4 +277,7 @@
 =======
 >>>>>>> e4faedc789c9198e61513c835f6d4ac02234ccb7
 
+
+
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>
