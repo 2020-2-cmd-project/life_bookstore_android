@@ -29,10 +29,9 @@ public class WriteActivity extends AppCompatActivity {
 
     public void writeBook(View view){
         book newBook = new book();
-        String newTitle = new String();
-        newTitle=editTitle.getText().toString();
+        String newTitle = editTitle.getText().toString();
         newTitle=newTitle.replace("'", "''");
-        book.setTitle(newTitle);
+        //book.setTitle(newTitle);
         String content=editContent.getText().toString();
         content=content.replace("'", "''");
 
