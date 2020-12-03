@@ -22,6 +22,7 @@ public class WriteActivity extends AppCompatActivity {
 //        editContent=findViewById(R.id.editContent);
     }
 
+    //작성뷰 to 메인뷰
     public void backtoMain(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

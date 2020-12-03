@@ -25,9 +25,6 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
-    //일기 커버 등록
-//    private static final int REQUEST_CODE = 0;
-//    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,40 +39,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //일기 커버 등록
-//        imageView = findViewById(R.id.image);
-//
-//        imageView.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent();
-//                intent.setType("image/*");
-//                intent.setAction(Intent.ACTION_GET_CONTENT);
-//                startActivityForResult(intent, REQUEST_CODE);
-//            }
-//        });
-    }
 
-    //일기 커버 등록
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if(requestCode == REQUEST_CODE) {
-//
-//            if(resultCode == RESULT_OK) {
-//                try {
-//                    InputStream in = getContentResolver().openInputStream(data.getData());
-//                    Bitmap img = BitmapFactory.decodeStream(in);
-//                    in.close();
-//                    imageView.setImageBitmap(img);
-//                } catch(Exception e)
-//                {
-//                }
-//            }
-//            else if(resultCode == RESULT_CANCELED) {
-//                Toast.makeText(this, "사진 선택 취소", Toast.LENGTH_LONG).show();
-//            }
-//        }
-//    }
+    }
 
 
     //카테고리 추가 팝업창 함수

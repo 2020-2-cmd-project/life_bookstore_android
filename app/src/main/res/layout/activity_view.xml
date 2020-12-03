@@ -4,183 +4,219 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#94ad8f"
+    android:background="#ffffff"
     tools:context=".ViewActivity">
 
+    <RelativeLayout
+        android:id="@+id/headPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#94ad8f">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="26.6dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/logo" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="18.6dp"
+            android:layout_marginLeft="18.6dp"
+            android:layout_marginTop="44.2dp"
+            android:background="@drawable/back_btn"
+            android:onClick="backtoMain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/modify_btn"
+            android:layout_width="29.4dp"
+            android:layout_height="29.4dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="17.4dp"
+            android:layout_marginRight="17.4dp"
+            android:background="@drawable/writing_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="29.4dp"
+            android:layout_height="29.4dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_toStartOf="@+id/modify_btn"
+            android:layout_toLeftOf="@+id/modify_btn"
+            android:background="@drawable/delete"
+            app:layout_constraintEnd_toStartOf="@+id/modify_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/diaryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:fontFamily="@font/arita_buri_semi_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="3.3sp"
+            android:text="우리의 밤은\n당신의 낮보다\n아름답다."
+            android:textColor="#ffffff"
+            android:textSize="34.6sp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/txtCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:layout_marginBottom="18.6dp"
+            android:layout_marginStart="18.6dp"
+            android:layout_marginLeft="18.6dp"
+            android:fontFamily="@font/arita_buri_semi_bold"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="2sp"
+            android:text="카테고리:"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txtPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="400dp"
+            android:layout_marginEnd="18.6dp"
+            android:layout_marginRight="18.6dp"
+            android:layout_marginBottom="18.6dp"
+            android:fontFamily="@font/arita_buri_semi_bold"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="2sp"
+            android:text="옥수동에서"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="370dp"
+            android:layout_marginEnd="18.6dp"
+            android:layout_marginRight="18.6dp"
+            android:layout_marginBottom="18.6dp"
+            android:fontFamily="@font/arita_buri_semi_bold"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="2sp"
+            android:text="20.10.28"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+    </RelativeLayout>
 
     <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="120dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="26dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="10dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/back_btn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:background="@drawable/writing_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="235dp"
-        android:layout_height="149dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginBottom="341dp"
-        android:fontFamily="@font/arita_buri_semi_bold"
-        android:gravity="center"
-        android:lineSpacingExtra="3.3sp"
-        android:text="우리의 밤은\n당신의 낮보다\n아름답다."
-        android:textColor="#ffffff"
-        android:textSize="34sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="482dp"
-        android:layout_height="514dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="160dp"
+        android:id="@+id/diaryCover"
+        android:layout_width="168dp"
         android:layout_height="232dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        android:layout_marginTop="325dp"
+        android:background="@drawable/add_cover"
+        android:paddingTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/arita_buri_semi_bold"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="2sp"
-        android:text="카테고리:"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent" />
+    <RelativeLayout
+        android:id="@+id/diaryContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headPart"
+        >
+<!--        -->
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="200dp">-->
+<!--            -->
+<!--        </ScrollView>-->
 
-    <TextView
-        android:id="@+id/txtDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="376dp"
-        android:layout_marginLeft="376dp"
-        android:layout_marginBottom="40dp"
-        android:fontFamily="@font/source_han_serif_k_semi_bold"
-        android:gravity="center_horizontal"
-        android:includeFontPadding="false"
-        android:lineSpacingExtra="2sp"
-        android:text="20.10.28"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txtQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="142.6dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:fontFamily="@font/bareun_batang_otf_pro_3"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="0.7sp"
+            android:text="여기에 정해진 질문이 들어갑니다?"
+            android:textColor="#000000"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/txtLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="368dp"
-        android:layout_marginLeft="368dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/source_han_serif_k_semi_bold"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="2sp"
-        android:text="옥수동에서"
-        android:includeFontPadding="false"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/bareun_batang_otf_pro_3"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="0.7sp"
-        android:text="여기에 정해진 질문이 들어갑니다?"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txtContent"
-        android:layout_width="309dp"
-        android:layout_height="277dp"
-        android:layout_marginTop="72dp"
-        android:fontFamily="@font/bareun_batang_otf_pro_1"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="0.7sp"
-        android:text="여기에 본문 내용을 넣어주고 미리보기를 할 수 있게 제공을 해주고 만약에 내용이 넘치면  ...더보기"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/arita_buri_medium"
+                    android:text="여기에 본문 내용을 넣어주고 미리보기를 할 수 있게 제공을 해주고만약에 내용이 넘치면 더보기를 클릭해서 보는 것이었지만 단순 스크롤로 구현했다..." />
 
-    <TextView
-        android:id="@+id/txtHashtag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:fontFamily="@font/arita_buri_light"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="2sp"
-        android:text="#감성"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/imageView12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView12"-->
+    <!--        android:layout_width="160dp"-->
+    <!--        android:layout_height="232dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/view"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        tools:srcCompat="@tools:sample/avatars" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/txtHashtag"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginBottom="12dp"-->
+    <!--        android:fontFamily="@font/arita_buri_light"-->
+    <!--        android:gravity="center_horizontal"-->
+    <!--        android:lineSpacingExtra="2sp"-->
+    <!--        android:text="#감성"-->
+    <!--        android:textColor="#ffffff"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="normal"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/imageView12"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.501"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

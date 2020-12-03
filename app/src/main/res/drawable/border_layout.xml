@@ -9,14 +9,14 @@
         android:top="7dp"
         android:bottom="7dp">
         <shape android:shape="rectangle">
-            <stroke android:width="5dp"
+            <stroke android:width="8dp"
                 android:color="@color/borderColor"/>
             <solid android:color="@color/borderBackground"/>
             <corners
-                android:bottomLeftRadius="30dp"
-                android:bottomRightRadius="30dp"
-                android:topLeftRadius="30dp"
-                android:topRightRadius="30dp" />
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp" />
         </shape>
     </item>
 
