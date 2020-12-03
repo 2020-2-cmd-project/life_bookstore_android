@@ -9,4 +9,5 @@
     <color name="borderColor">#6f503a</color>
     <color name="borderBackground">#f3f3f0</color>
     <color name="searchColor">#e5e6e7</color>
+    <color name="addBook">#8e8e8e</color>
 </resources>

@@ -18,8 +18,8 @@ public class WriteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
 
-        editTitle=findViewById(R.id.editTitle);
-        editContent=findViewById(R.id.editContent);
+//        editTitle=findViewById(R.id.editTitle);
+//        editContent=findViewById(R.id.editContent);
     }
 
     public void backtoMain(View view) {
@@ -27,22 +27,20 @@ public class WriteActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void writeBook(View view){
-        book newBook = new book();
-        String newTitle = editTitle.getText().toString();
-        newTitle=newTitle.replace("'", "''");
-        //book.setTitle(newTitle);
-        String content=editContent.getText().toString();
-        content=content.replace("'", "''");
+// 에뮬레이터 실행시키면 에러나서 일단 주석 처리 했어요!
 
+//    public void writeBook(View view){
+//        book newBook = new book();
+//        String newTitle = editTitle.getText().toString();
+//        newTitle=newTitle.replace("'", "''");
+//        //book.setTitle(newTitle);
+//        String content=editContent.getText().toString();
+//        content=content.replace("'", "''");
+//
+//        backtoMain(view);
+//    }
 
-
-
-        backtoMain(view);
-    }
-
-    public void addHashtags()
-
+//    public void addHashtags()
 
 
 }

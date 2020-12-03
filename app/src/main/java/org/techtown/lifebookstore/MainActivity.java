@@ -6,11 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextClock;
 import android.widget.TextView;
@@ -18,7 +21,13 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity {
+
+    //일기 커버 등록
+//    private static final int REQUEST_CODE = 0;
+//    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +41,42 @@ public class MainActivity extends AppCompatActivity {
                 show();
             }
         });
+
+        //일기 커버 등록
+//        imageView = findViewById(R.id.image);
+//
+//        imageView.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setType("image/*");
+//                intent.setAction(Intent.ACTION_GET_CONTENT);
+//                startActivityForResult(intent, REQUEST_CODE);
+//            }
+//        });
     }
+
+    //일기 커버 등록
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if(requestCode == REQUEST_CODE) {
+//
+//            if(resultCode == RESULT_OK) {
+//                try {
+//                    InputStream in = getContentResolver().openInputStream(data.getData());
+//                    Bitmap img = BitmapFactory.decodeStream(in);
+//                    in.close();
+//                    imageView.setImageBitmap(img);
+//                } catch(Exception e)
+//                {
+//                }
+//            }
+//            else if(resultCode == RESULT_CANCELED) {
+//                Toast.makeText(this, "사진 선택 취소", Toast.LENGTH_LONG).show();
+//            }
+//        }
+//    }
+
 
     //카테고리 추가 팝업창 함수
     void show() {
