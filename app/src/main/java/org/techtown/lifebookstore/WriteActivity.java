@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Button;
+import io.realm.Realm;
+import io.realm.RealmObject;
+
 
 public class WriteActivity extends AppCompatActivity {
     EditText editTitle;
@@ -18,8 +21,9 @@ public class WriteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
 
-//        editTitle=findViewById(R.id.editTitle);
-//        editContent=findViewById(R.id.editContent);
+        Realm realm = Realm.getDefaultInstance();
+        editTitle=findViewById(R.id.editTitle);
+        editContent=findViewById(R.id.editContent);
     }
 
     //작성뷰 to 메인뷰
@@ -28,18 +32,18 @@ public class WriteActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-// 에뮬레이터 실행시키면 에러나서 일단 주석 처리 했어요!
+    public void writeBook(){
+        Book newBook = new Book();
+        String newTitle = editTitle.getText().toString();
+        newTitle=newTitle.replace("'", "''");
+        newBook.setTitle(newTitle);
+        String content=editContent.getText().toString();
+        content=content.replace("'", "''");
+        newBook.setContent(content);
 
-//    public void writeBook(View view){
-//        book newBook = new book();
-//        String newTitle = editTitle.getText().toString();
-//        newTitle=newTitle.replace("'", "''");
-//        //book.setTitle(newTitle);
-//        String content=editContent.getText().toString();
-//        content=content.replace("'", "''");
-//
-//        backtoMain(view);
-//    }
+        //backtoMain();
+    }
+
 
 //    public void addHashtags()
 
