@@ -63,7 +63,7 @@
             android:id="@+id/diaryTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="150dp"
             android:fontFamily="@font/arita_buri_semi_bold"
             android:gravity="center"
             android:lineSpacingExtra="3.3sp"
@@ -125,11 +125,10 @@
 
     <ImageView
         android:id="@+id/diaryCover"
-        android:layout_width="168dp"
-        android:layout_height="232dp"
+        android:layout_width="160dp"
+        android:layout_height="220dp"
         android:layout_marginTop="325dp"
         android:background="@drawable/add_cover"
-        android:paddingTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -178,7 +177,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textColor="#000000"
                     android:textSize="20sp"
                     android:fontFamily="@font/arita_buri_medium"

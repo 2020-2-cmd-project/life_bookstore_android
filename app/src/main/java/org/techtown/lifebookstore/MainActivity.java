@@ -85,4 +85,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //메인뷰 to 상세뷰
+    public void movetoView(View view) {
+        Intent intent = new Intent(this, ViewActivity.class);
+        startActivity(intent);
+    }
+
 }
