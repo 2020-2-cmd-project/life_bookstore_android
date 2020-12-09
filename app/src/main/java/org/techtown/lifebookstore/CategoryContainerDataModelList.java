@@ -1,6 +1,7 @@
 package org.techtown.lifebookstore;
 
-public class CategoryContainerDataModelList {
-    private String categoryName;
+import java.util.ArrayList;
 
+public class CategoryContainerDataModelList {
+    ArrayList<String> CategoryList = new ArrayList();
 }

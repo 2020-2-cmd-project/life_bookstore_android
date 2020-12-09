@@ -6,15 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Button;
+
 import io.realm.Realm;
-import io.realm.RealmObject;
 
 
 public class WriteActivity extends AppCompatActivity {
-    EditText editTitle;
-    EditText editContent;
+    EditText setTitle;
+    EditText writeDiary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +20,8 @@ public class WriteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_write);
 
         Realm realm = Realm.getDefaultInstance();
-        editTitle=findViewById(R.id.editTitle);
-        editContent=findViewById(R.id.editContent);
+        setTitle=findViewById(R.id.setTitle);
+        writeDiary=findViewById(R.id.writeDiary);
     }
 
     //작성뷰 to 메인뷰
@@ -34,10 +32,10 @@ public class WriteActivity extends AppCompatActivity {
 
     public void writeBook(){
         Book newBook = new Book();
-        String newTitle = editTitle.getText().toString();
+        String newTitle = setTitle.getText().toString();
         newTitle=newTitle.replace("'", "''");
         newBook.setTitle(newTitle);
-        String content=editContent.getText().toString();
+        String content=writeDiary.getText().toString();
         content=content.replace("'", "''");
         newBook.setContent(content);
 

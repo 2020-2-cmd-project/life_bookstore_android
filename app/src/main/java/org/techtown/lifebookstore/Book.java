@@ -39,7 +39,7 @@ public class Book extends RealmObject {
     private int index=-1;
     private int categoryIndex=-1;
     private int questionIndex=-1;
-    private RealmList<HashTags> hashRealmList;
+    private RealmList<HashTag> hashRealmList;
 
     public String getTitle() {
         return title;
