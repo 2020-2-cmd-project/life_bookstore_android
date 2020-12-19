@@ -2,26 +2,33 @@ package org.techtown.lifebookstore;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 public class Book extends RealmObject {
-    private int index=-1;
-    private String title="무제";
-    private String date="2020.00.00.";
-    private String place="장소";
-    private String content=".";
-    private String color="#000000";
-    private int categoryIndex=-1;
-    private int questionIndex=-1;
+    @PrimaryKey
+    int id;
+    private String title;
+    private String date;
+    private String place;
+    String content;
+    private String color;
+    private int categoryIndex;
+    private int questionIndex;
     //private RealmList<HashTag> hashRealmList;
     //private RealmList<Category> categories;
 
+    public Book(){}
+
+    public Book(int index){
+        this.id = id;
+    }
 
     public int getIndex() {
-        return index;
+        return id;
     }
 
     public void setIndex(int index) {
-        this.index = index;
+        this.id = index;
     }
 
     public int getCategoryIndex() {
