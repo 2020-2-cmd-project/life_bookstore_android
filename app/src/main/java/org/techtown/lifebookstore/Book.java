@@ -8,10 +8,7 @@ import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
 
 public class Book extends RealmObject {
-    @PrimaryKey
     private int index=-1;
-
-    @Required
     private String title;
     private String date;
     private String location;
@@ -21,8 +18,7 @@ public class Book extends RealmObject {
     private int questionIndex=-1;
     //private RealmList<HashTag> hashRealmList;
     //private RealmList<Category> categories;
-
-
+    
     public int getIndex() {
         return index;
     }
