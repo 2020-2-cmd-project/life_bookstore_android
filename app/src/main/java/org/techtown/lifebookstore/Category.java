@@ -18,8 +18,9 @@ public class Category extends RealmObject {
     }
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
-        System.out.println(this.categoryName);
+        //System.out.println(this.categoryName);
     }
+
 
 
 }
