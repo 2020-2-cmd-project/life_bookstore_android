@@ -4,6 +4,7 @@ import io.realm.RealmObject;
 
 public class Category extends RealmObject {
     private String categoryName="무제";
+    private int id;
 
     public Category() {
 

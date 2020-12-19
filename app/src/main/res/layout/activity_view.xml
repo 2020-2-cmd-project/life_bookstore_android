@@ -11,7 +11,8 @@
         android:id="@+id/headPart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#94ad8f">
+        android:background="#94ad8f"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/imageView11"
@@ -60,7 +61,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/diaryTitle"
+            android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
@@ -176,12 +177,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/txtContent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
                     android:fontFamily="@font/arita_buri_medium"
-                    android:text="여기에 본문 내용을 넣어주고 미리보기를 할 수 있게 제공을 해주고만약에 내용이 넘치면 더보기를 클릭해서 보는 것이었지만 단순 스크롤로 구현했다..." />
+                    android:text="여기에 본문 내용을 넣어주고 미리보기를 할 수 있게 제공을 해주고만약에 내용이 넘치면 더보기를 클릭해서 보는 것이었지만 단순 스크롤로 구현했다..."
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 

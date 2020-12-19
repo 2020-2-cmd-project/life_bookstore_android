@@ -12,8 +12,8 @@ public class Book extends RealmObject {
     private String place;
     String content;
     private String color;
-    private int categoryIndex;
-    private int questionIndex;
+    private String category;
+    private String question;
     //private RealmList<HashTag> hashRealmList;
     //private RealmList<Category> categories;
 
@@ -31,20 +31,20 @@ public class Book extends RealmObject {
         this.id = index;
     }
 
-    public int getCategoryIndex() {
-        return categoryIndex;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCategoryIndex(int categoryIndex) {
-        this.categoryIndex = categoryIndex;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public int getQuestionIndex() {
-        return questionIndex;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setQuestionIndex(int questionIndex) {
-        this.questionIndex = questionIndex;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public String getTitle() {
