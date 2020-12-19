@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import io.realm.Realm;
-
+import io.realm.RealmResults;
 
 public class WriteActivity extends AppCompatActivity {
     private Realm realm;
@@ -23,9 +23,7 @@ public class WriteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_write);
 
         realm = Realm.getDefaultInstance();
-
-        Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        //showResult();
     }
 
     //작성뷰 to 메인뷰
@@ -56,7 +54,7 @@ public class WriteActivity extends AppCompatActivity {
         book.setPlace(Place);
         //book.setIndex();
         realm.commitTransaction();
-        
+
         Intent intent = new Intent(this, ViewActivity.class);
         startActivity(intent);
     }
