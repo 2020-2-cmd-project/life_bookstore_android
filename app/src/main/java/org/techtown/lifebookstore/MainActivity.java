@@ -25,9 +25,13 @@ import org.w3c.dom.Text;
 import java.io.InputStream;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 public class MainActivity extends AppCompatActivity {
+
     private Realm realm;
+
+    private EditText mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,24 +49,36 @@ public class MainActivity extends AppCompatActivity {
         realm = Realm.getDefaultInstance();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        realm.close();
+    }
+
 
     //카테고리 추가 팝업창 함수
     void show() {
 
-        final EditText edittext = new EditText(this);
+        final EditText newCategory = new EditText(this);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle("새 카테고리 만들기");
         builder.setMessage("새로운 카테고리를 만들어주세요");
 
-        builder.setView(edittext);
+        builder.setView(newCategory);
+
 
         builder.setPositiveButton("등록하기",
+
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(),edittext.getText().toString() ,Toast.LENGTH_LONG).show();
-                        //Toast = 하단 팝업. 나중엔 데이터에 반영되도록 수정해야 함.
+                        realm.beginTransaction();
+                        Category category = new Category();
+                        String new_category = newCategory.getText().toString();
+                        category.setCategoryName(new_category);
+                        realm.commitTransaction();
+                        //Toast.makeText(getApplicationContext(), newCategory.getText().toString(), Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -92,5 +108,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewActivity.class);
         startActivity(intent);
     }
+
+
 
 }

@@ -23,8 +23,6 @@ public class MyBookStore extends Application {
         Realm.setDefaultConfiguration(config);
 
 
-
-
     }
 
 
