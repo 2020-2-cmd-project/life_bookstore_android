@@ -9,16 +9,16 @@ import io.realm.annotations.Required;
 
 public class Book extends RealmObject {
     private int index=-1;
-    private String title;
-    private String date;
-    private String location;
-    private String content;
-    private String color;
+    private String title="무제";
+    private String date="2020.00.00.";
+    private String place="장소";
+    private String content=".";
+    private String color="#000000";
     private int categoryIndex=-1;
     private int questionIndex=-1;
     //private RealmList<HashTag> hashRealmList;
     //private RealmList<Category> categories;
-    
+
     public int getIndex() {
         return index;
     }
@@ -59,12 +59,12 @@ public class Book extends RealmObject {
         this.date = date;
     }
 
-    public String getLocation() {
-        return location;
+    public String getPlace() {
+        return place;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setPlace(String place) {
+        this.place = place;
     }
 
     public String getContent() {

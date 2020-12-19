@@ -5,15 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import io.realm.Realm;
 
 
 public class WriteActivity extends AppCompatActivity {
-    EditText setTitle;
-    EditText writeDiary;
-
     private Realm realm;
 
     @Override
@@ -22,8 +23,9 @@ public class WriteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_write);
 
         realm = Realm.getDefaultInstance();
-        setTitle=findViewById(R.id.setTitle);
-        writeDiary=findViewById(R.id.writeDiary);
+
+        Date d = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     }
 
     //작성뷰 to 메인뷰
@@ -32,19 +34,34 @@ public class WriteActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void writeBook(){
-        realm.beginTransaction();
+    //작성 및 저장
+    public void writeBook(View view){
+        EditText setTitle=(EditText)findViewById(R.id.setTitle);
+        EditText writeDiary=(EditText)findViewById(R.id.writeDiary);
+        EditText setDate = (EditText)findViewById(R.id.setDate);
+        EditText setPlace = (EditText)findViewById(R.id.setPlace);
 
-        Book newBook = new Book();
-        String newTitle = setTitle.getText().toString();
-        newTitle=newTitle.replace("'", "''");
-        newBook.setTitle(newTitle);
+        String title = setTitle.getText().toString();
+        title=title.replace("'", "''");
         String content=writeDiary.getText().toString();
         content=content.replace("'", "''");
-        newBook.setContent(content);
+        String Place = setPlace.getText().toString();
+        String Date = setDate.getText().toString();
 
-        //backtoMain();
+        realm.beginTransaction();
+        Book book = new Book();
+        book.setContent(content);
+        book.setTitle(title);
+        book.setDate(Date);
+        book.setPlace(Place);
+        //book.setIndex();
+        realm.commitTransaction();
+        
+        Intent intent = new Intent(this, ViewActivity.class);
+        startActivity(intent);
     }
+
+  //  public void saveBook
 
 
 //    public void addHashtags()
