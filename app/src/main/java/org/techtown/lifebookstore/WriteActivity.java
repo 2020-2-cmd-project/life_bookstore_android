@@ -5,14 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import io.realm.Realm;
-import io.realm.RealmResults;
 
 public class WriteActivity extends AppCompatActivity {
     private Realm realm;
@@ -47,7 +42,7 @@ public class WriteActivity extends AppCompatActivity {
         String Date = setDate.getText().toString();
 
         realm.beginTransaction();
-        Book book = new Book();
+        Book book = realm.createObject(Book.class);
         book.setContent(content);
         book.setTitle(title);
         book.setDate(Date);

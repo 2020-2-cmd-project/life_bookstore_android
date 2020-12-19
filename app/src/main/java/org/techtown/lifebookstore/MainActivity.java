@@ -25,16 +25,16 @@ import org.w3c.dom.Text;
 import java.io.InputStream;
 
 import io.realm.Realm;
+import io.realm.RealmObject;
 import io.realm.RealmResults;
 
 public class MainActivity extends AppCompatActivity {
-
     private Realm realm;
-
-    private EditText mTitle;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         realm = Realm.getDefaultInstance();
+        //Log.i(TAG, "Realm 디렉토리: " + realm.getPath());
+        //Log.i(TAG, "Realm 환경설정 값: " + realm.getConfiguration());
+
     }
 
     @Override
@@ -57,9 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     //카테고리 추가 팝업창 함수
-    void show() {
+    public void show() {
 
-        final EditText newCategory = new EditText(this);
+        //final Category category = realm.where(Category.class);
+
+        EditText newCategory = new EditText(this);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -73,11 +78,37 @@ public class MainActivity extends AppCompatActivity {
 
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        realm.beginTransaction();
-                        Category category = new Category();
-                        String new_category = newCategory.getText().toString();
-                        category.setCategoryName(new_category);
-                        realm.commitTransaction();
+
+                        //final Category category = new Category();
+
+                        realm.executeTransactionAsync(new Realm.Transaction() {
+                            @Override
+                            public void execute(Realm realm) {
+                                Category category = realm.createObject(Category.class);
+                                category.setCategoryName("직접넣어보자");
+                            }
+                        }, new Realm.Transaction.OnSuccess() {
+                            @Override
+                            public void onSuccess() {
+                                Toast.makeText(MainActivity.this, "성공", Toast.LENGTH_SHORT).show();
+                                System.out.println("SUCCESS");
+                            }
+                        }, new Realm.Transaction.OnError() {
+                            @Override
+                            public void onError(Throwable error) {
+                                Toast.makeText(MainActivity.this, "실패", Toast.LENGTH_SHORT).show();
+                                System.out.println("faill");
+                            }
+                        });
+
+//                        realm.beginTransaction();
+//
+//                        Category category = realm.createObject(Category.class);
+//                        category.setCategoryName("카테고리명");
+//
+//                        //String new_category = newCategory.getText().toString();
+//                        //category.setCategoryName(new_category);
+//                        realm.commitTransaction();
                         //Toast.makeText(getApplicationContext(), newCategory.getText().toString(), Toast.LENGTH_LONG).show();
                     }
                 });
@@ -108,7 +139,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewActivity.class);
         startActivity(intent);
     }
-
-
 
 }

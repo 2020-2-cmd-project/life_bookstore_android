@@ -1,11 +1,7 @@
 package org.techtown.lifebookstore;
 
-import java.util.ArrayList;
-
 import io.realm.RealmList;
 import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
-import io.realm.annotations.Required;
 
 public class Book extends RealmObject {
     private int index=-1;
@@ -18,6 +14,7 @@ public class Book extends RealmObject {
     private int questionIndex=-1;
     //private RealmList<HashTag> hashRealmList;
     //private RealmList<Category> categories;
+
 
     public int getIndex() {
         return index;
