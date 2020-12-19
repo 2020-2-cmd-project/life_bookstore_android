@@ -14,13 +14,15 @@ public class MyBookStore extends Application {
     public void onCreate(){
         super.onCreate();
         Realm.init(this);
+
         RealmConfiguration config = new RealmConfiguration.Builder()
-                .name("MyBookStore") // 생성할 realm파일 이름 지정
-                .schemaVersion(0)
+                .deleteRealmIfMigrationNeeded()
                 .build();
 
         //Realm에 셋팅한 정보 값을 지정
         Realm.setDefaultConfiguration(config);
+
+
 
 
     }

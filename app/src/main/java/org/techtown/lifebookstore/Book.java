@@ -4,13 +4,24 @@ import java.util.ArrayList;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 public class Book extends RealmObject {
+    @PrimaryKey
+    private int index=-1;
+
+    @Required
     private String title;
     private String date;
     private String location;
     private String content;
     private String color;
+    private int categoryIndex=-1;
+    private int questionIndex=-1;
+    //private RealmList<HashTag> hashRealmList;
+    //private RealmList<Category> categories;
+
 
     public int getIndex() {
         return index;
@@ -35,11 +46,6 @@ public class Book extends RealmObject {
     public void setQuestionIndex(int questionIndex) {
         this.questionIndex = questionIndex;
     }
-
-    private int index=-1;
-    private int categoryIndex=-1;
-    private int questionIndex=-1;
-    private RealmList<HashTag> hashRealmList;
 
     public String getTitle() {
         return title;

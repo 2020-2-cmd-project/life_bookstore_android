@@ -24,8 +24,10 @@ import org.w3c.dom.Text;
 
 import java.io.InputStream;
 
-public class MainActivity extends AppCompatActivity {
+import io.realm.Realm;
 
+public class MainActivity extends AppCompatActivity {
+    private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        realm = Realm.getDefaultInstance();
     }
 
 

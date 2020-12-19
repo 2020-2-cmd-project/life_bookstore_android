@@ -14,12 +14,14 @@ public class WriteActivity extends AppCompatActivity {
     EditText setTitle;
     EditText writeDiary;
 
+    private Realm realm;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
 
-        Realm realm = Realm.getDefaultInstance();
+        realm = Realm.getDefaultInstance();
         setTitle=findViewById(R.id.setTitle);
         writeDiary=findViewById(R.id.writeDiary);
     }
@@ -31,6 +33,8 @@ public class WriteActivity extends AppCompatActivity {
     }
 
     public void writeBook(){
+        realm.beginTransaction();
+
         Book newBook = new Book();
         String newTitle = setTitle.getText().toString();
         newTitle=newTitle.replace("'", "''");
